@@ -4,14 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-      has_many :groups, dependent: :destroy
-      has_many :entities, dependent: :destroy
+  has_many :groups, dependent: :destroy
+  has_many :entities, dependent: :destroy
 
-      def admin?
-  has_role?(:admin)
-end
+  def admin?
+    has_role?(:admin)
+  end
 
-def client?
-  has_role?(:client)
-end 
+  def client?
+    has_role?(:client)
+  end
 end
