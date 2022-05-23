@@ -1,12 +1,12 @@
-# Food Recipe App
+# Budget App
 
 ## Description
 
-> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+> The Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 
 ## Screenshot
-![screencapture-localhost-3000-2022-05-20-15_19_30](https://user-images.githubusercontent.com/87186552/169548492-4a41c85f-da93-47f5-b96c-541cc30187ca.png)
+
 ## Built With
 
 - Ruby on Rails
@@ -19,11 +19,11 @@
 - git clone the project
 
 ```bash
-git clone https://github.com/Anny85-code/food-recipe.git
+git clone https://github.com/Anny85-code/budget-app.git
 ```
 
 ```
-cd recipe_app
+cd budget-app
 ```
 
 ### Install the app
@@ -68,10 +68,6 @@ rspec spec/views
 - Twitter: [@Annyudo8](https://twitter.com/Anny_udo8)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aniekan-udo-665b65213/)
 
-👤 **Jaflih**
-
-- GitHub: [@githubhandle](https://github.com/jaflih)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jaflih/)
 
 ## 🤝 Contributing
 
@@ -84,7 +80,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- [x] Template by [Colorlib](https://colorlib.com/)
+- [x] Template by [Gregoire Vella on Behance.](https://www.behance.net/gregoirevella)
 - Microverse
 - Inspiration
 - Colorlib
