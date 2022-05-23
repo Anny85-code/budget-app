@@ -33,6 +33,13 @@ gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
+gem 'cancancan'
+gem 'jwt'
+gem 'rswag'
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
