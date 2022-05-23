@@ -6,4 +6,12 @@ class User < ApplicationRecord
 
       has_many :groups, dependent: :destroy
       has_many :entities, dependent: :destroy
+
+      def admin?
+  has_role?(:admin)
+end
+
+def client?
+  has_role?(:client)
+end 
 end
