@@ -1,0 +1,14 @@
+
+  <section class="container-fluid pt-5 m-5">
+    <div class="container">
+      <h1>Add new category</h1>
+      <%= form_with model: @group, url: groups_path, class: "left" do |form| %>
+        <%= form.label :Name %> <br>
+        <%= form.text_field :name, class: 'form-control' %> <br>
+        <%= form.label :icon %> <br>
+        <%= form.text_field :icon, class: 'form-control' %> <br>
+        <%= form.submit "Submit", class: "btn btn-info btn-lg" %>
+      <% end %>
+    </div>
+  </section>
+
