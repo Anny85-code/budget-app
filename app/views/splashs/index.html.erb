@@ -1,11 +1,12 @@
-<h1>Splashs#index</h1>
-<p>Find me in app/views/splashs/index.html.erb</p>
+<div class="pt-5 pb-5 m-5">
+<h1 class="text-center mb-5">Budget Alpha</h1>
 
-<p><%= @reg %></p>
-
-<%= link_to "Sign Up", new_user_registration_path %> 
-<%= link_to "Log In", new_user_session_path %>
+<div class="d-flex flex-column w-400">
+<div class="mb-3 mt-5"><%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg btn-block" %></div>
+<div><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg btn-block" %> </div>
+</div>
 
 <% if user_signed_in? %>
       <a><%= button_to "Sign out", destroy_user_session_path, method: :delete %></a></li>
     <% end %>
+</div>
