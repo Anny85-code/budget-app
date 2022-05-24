@@ -1,0 +1,11 @@
+<h1>Splashs#index</h1>
+<p>Find me in app/views/splashs/index.html.erb</p>
+
+<p><%= @reg %></p>
+
+<%= link_to "Sign Up", new_user_registration_path %> 
+<%= link_to "Log In", new_user_session_path %>
+
+<% if user_signed_in? %>
+      <a><%= button_to "Sign out", destroy_user_session_path, method: :delete %></a></li>
+    <% end %>

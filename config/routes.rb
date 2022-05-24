@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'splashs/index'
   get 'pages/home'
   get 'entities/index'
   get 'entities/show'
