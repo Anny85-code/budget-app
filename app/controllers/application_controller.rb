@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   
   if current_user
-    pages_home_path
+    pages_path
   else
     new_user_session_path
   end
