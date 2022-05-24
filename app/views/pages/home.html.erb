@@ -1,5 +1,6 @@
+<div class="text-center m-5">
 <h1>Home page</h1>
-<p><%= @message %></p>
+
 
 <% @entities.each do |n| %>
         <div class="col-xl-4 col-lg-4 col-md-6">
@@ -11,3 +12,8 @@
           </div>
         </div>
       <% end %>
+
+      <div class="p-5  d-flex align-items-center justify-content-center">
+      <button type="button" class="btn btn-secondary btn-lg w-400"><%= link_to "Create new category", new_group_path %></button></div>
+
+      </div>

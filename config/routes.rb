@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'entities/show'
   get 'groups/index'
   get 'groups/show'
+
+  resources :groups
   devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

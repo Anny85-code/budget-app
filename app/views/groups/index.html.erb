@@ -1,2 +1,14 @@
 <h1>Groups#index</h1>
 <p>Find me in app/views/groups/index.html.erb</p>
+
+
+<div class="text-center m-5">
+    
+    <div class="container-fluid m-2">
+      <div class="row">
+        <% @foods.each do |f| %>
+          <%= render partial: "food", locals: { food: f} %>
+        <% end %>
+      </div>
+    </div>
+  </div>

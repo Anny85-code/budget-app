@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @entities = Group.includes(:entity).order(id: 'DESC')
+    @entities = Group.includes(:groups).order(id: 'DESC')
   end
 end
 
