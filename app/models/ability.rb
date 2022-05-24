@@ -7,7 +7,6 @@ class Ability
     if user.role == 'admin'
       can :manage, :all
     else
-      # can :read, :all
       can :create, Entity
       can :create, Group
       can :destroy, Entity do |entity|

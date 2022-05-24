@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   def index
     @groups = Group.where(user: current_user)
   end
@@ -17,7 +19,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to groups_index_path(id: @group.user_id) }
+        format.html { redirect_to groups_path(id: @group.user_id) }
         flash[:notice] = 'You have successfully created a category.'
       else
         format.html { render :new, alert: 'An error has occurred while creating category' }

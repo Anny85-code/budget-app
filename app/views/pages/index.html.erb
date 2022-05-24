@@ -2,13 +2,14 @@
 <h1>Home page</h1>
 
 
-<% @groups.each do |n| %>
+<% @groups.each do |group| %>
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single_recepie text-center">
-
-            <h3><%= n.name %></h3>
-            <h3><%= n.icon %></h3>
-            
+          <% if can? :read, group %>
+            <p><%= group.name %></p>
+            <p><%= group.icon %></p>
+            <%= link_to "see more", group %>
+          <% end %>
           </div>
         </div>
       <% end %>

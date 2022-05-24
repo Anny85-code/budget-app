@@ -1,2 +1,7 @@
 <h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+
+<% if can? :destroy, @group %>
+  <%= render @group %>
+  <%= button_to "Destroy this category", @group, method: :delete %>
+<% end %>
+
