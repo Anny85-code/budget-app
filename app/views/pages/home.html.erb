@@ -1,2 +1,13 @@
 <h1>Home page</h1>
 <p><%= @message %></p>
+
+<% @entities.each do |n| %>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="single_recepie text-center">
+
+            <h3><%= n.name %></h3>
+            <h3><%= n.icon %></h3>
+            
+          </div>
+        </div>
+      <% end %>
