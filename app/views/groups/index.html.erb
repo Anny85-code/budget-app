@@ -3,7 +3,8 @@
     <div class="container-fluid m-2">
       <div class="row">
         <% @groups.each do |g| %>
-          <%= render partial: "group", locals: { group: g} %>
+          <%= render g %>
+          <%# <%= render partial: "group", locals: { group: g} %> %>
         <% end %>
       </div>
     </div>

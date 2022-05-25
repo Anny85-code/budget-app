@@ -8,6 +8,7 @@
           <% if can? :read, group %>
             <p><%= group.name %></p>
             <p><%= group.icon %></p>
+            <p><%= group.author_id %></p>
             <%= link_to "see more", group %>
           <% end %>
           </div>

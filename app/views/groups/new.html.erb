@@ -3,24 +3,43 @@
   <div class="container-fluid pt-5 m-5">
     <div class="container">
       <h1>Create new category</h1>
-       <p>Fill in the data below.</p>
+     
       <%= form_with model: @group, url: groups_path, class: " requires-validation" do |form| %>
+
+<% if @group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% @group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
        <div class="col mb-0">
         <%= form.label :Name, class: 'mb-0' %> <br>
         <%= form.text_field :name, class: 'form-control' %> 
-        <div class="valid-feedback">Name field is valid!</div>
-        <div class="invalid-feedback">Name field cannot be blank!</div>
         </div><br>
          <div class="col">
         <%= form.label :icon, 'Icon' , class: 'pb-2 pt-2' %> <br>
          <%= form.url_field :icon, class: "form-control"%> <br>
-          <div class="invalid-feedback">Icon field cannot be blank!</div>
+          
           </div>
+
+    <div>
+    <%= form.label :author_id, style: "display: block" %>
+    <%= form.text_field :author_id, value: current_user.id %>
+  </div>
+
            <div class="form-check">
           <input class="form-check-input mt-2" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label pt-1">I confirm that all data are correct</label>
-        <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+       
       </div>
+      
          <div class="form-button mt-3">
           <button id="submit" type="submit" class="btn btn-primary">Add Category</button>
             </div>
