@@ -1,11 +1,11 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[ show edit update destroy ]
-  before_action :recent_transaction
-
+  
   # GET /transactions or /transactions.json
   def index
     @transactions = Transaction.all
-  end
+    @recent_transactions = @transactions.order(created_at: :desc)
+ end
 
   # GET /transactions/1 or /transactions/1.json
   def show
@@ -64,9 +64,6 @@ class TransactionsController < ApplicationController
       @transaction = Transaction.find(params[:id])
     end
 
-    def recent_transaction
-      @transaction.order(create_at: :desc)
-    end
     # Only allow a list of trusted parameters through.
     def transaction_params
       params.require(:transaction).permit(:name, :amount, :author_id, :group_id)
