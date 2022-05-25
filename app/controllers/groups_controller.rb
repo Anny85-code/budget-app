@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
   load_and_authorize_resource
+  before_action :authenticate_user!
   def index
     # @groups = Group.where(author: current_user)
     @groups = Group.all

@@ -1,8 +1,9 @@
 class EntitiesController < ApplicationController
-  before_action :authenticate_user!
   load_and_authorize_resource
+  # before_action :set_entity, only: %i[show edit destroy]
+  before_action :authenticate_user!
   def index
-    @group = Group.all
+    # @groups = Group.all
     @entities = Entity.all
     # @total_amount = 0
     # @entities.each do |entity|
@@ -14,12 +15,11 @@ class EntitiesController < ApplicationController
   end
 
   def new
-    @Entity = Entity.new
+    @entity = Entity.new
   end
 
   def create
-    @Entity = Entity.new(entity_params)
-    # @group.author_id = current_user.id
+    @entity = Entity.new(entity_params)
 
     respond_to do |format|
       if @entity.save
@@ -31,10 +31,15 @@ class EntitiesController < ApplicationController
         format.html { render :new, alert: 'An error has occurred while creating a transaction' }
       end
     end
+    private
 
-  def entity_params
-    params.require(:entity).permit(:name, :amount, :author_id)
-  end
+    # def set_entity
+    #   @entity = Entity.find(params[:id])
+    # end
+
+  # def entity_params
+  #   params.require(:entity).permit(:name, :amount)
+  # end
 end
 end
-# end
+
