@@ -19,7 +19,7 @@ RSpec.describe "transactions/new", type: :view do
 
       assert_select "input[name=?]", "transaction[amount]"
 
-      assert_select "input[name=?]", "transaction[user_id]"
+      assert_select "input[name=?]", "transaction[author_id]"
 
       assert_select "input[name=?]", "transaction[group_id]"
     end

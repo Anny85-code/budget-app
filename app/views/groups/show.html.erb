@@ -5,3 +5,18 @@
   <%= button_to "Destroy this category", @group, method: :delete %>
 <% end %>
 
+<% if @group.transactions.empty? %>
+  <p>No transactions at this time! Add some...</p>
+<% else %>
+  <div id="transactions">
+  <% @group.transactions.order(created_at: :desc).each do |transaction| %>
+    <%= render transaction %>
+    <p>
+      <%= link_to "Show this transaction", transaction %>
+    </p>
+  <% end %>
+</div>
+<% end %>
+
+<%= link_to "New transaction", new_transaction_path %>
+

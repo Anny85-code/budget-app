@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 end
 
 
-# @user = User.includes(:posts, :comments, :likes).find(params[:user_id])
+# @user = User.includes(:posts, :comments, :likes).find(params[:author_id])
 #     @posts = Post.all
 
 #      @foods = Recipe.includes(:recipe_foods).where(public: true).order(id: 'DESC')
