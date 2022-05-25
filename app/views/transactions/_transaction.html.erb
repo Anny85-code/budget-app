@@ -19,4 +19,9 @@
     <%= transaction.group_id %>
   </p>
 
+  <p>
+    <strong>Date:</strong>
+    <%= transaction.created_at.strftime('%F - %I:%H:%M %p') %>
+  </p>
+
 </div>
