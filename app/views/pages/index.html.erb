@@ -7,8 +7,13 @@
         <div class="card-1">
         <div class="d-flex gap-3">
             <%= image_tag "#{category.icon}", size: "80x80", alt: 'icon' %>
-         <p class="d-flex align-items-center justify-content-between "><%= category.name %></p>
-         </div>
+        <ul>
+        <li><p class="d-flex align-items-center justify-content-between "><%= category.name %></p></li>
+        <li>
+        <span class="created_at"><%= category.created_at.strftime('%F - %I:%H:%M %p') %></span>
+        </li>
+        </ul>
+        </div>
         </div>
       <% end %>
           <% end %>

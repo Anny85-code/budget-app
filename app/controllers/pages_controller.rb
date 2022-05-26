@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @categories = Category.order(id: 'DESC')
+    @categories = Category.includes(:transactions).order(id: 'DESC')
   end
 end
 

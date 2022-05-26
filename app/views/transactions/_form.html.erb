@@ -11,34 +11,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div> 
+    <%= form.text_field :name, class: 'form-control', placeholder: 'name' %>
+  </div><br>
 
   <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount %>
-  </div>
+    <%= form.number_field :amount, class: 'form-control', placeholder: 'amount' %>
+  </div><br>
 
   <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id, value: current_user.id %>
-  </div>
-
-  <div>
-    <%= form.label :category_id, style: "display: block" %>
     <div>
-      <%= form.select :category_id, Category.all.collect {|g| [g.name, g.id]}, {include_blank: true} %>
+      <div>
+        <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]}, { prompt: "Select Category" }, class:"form-control mb-3" %>
+      </div>
     </div>
   </div>
 
   <div class="form-check">
     <input class="form-check-input mt-2" type="checkbox" value="" id="invalidCheck" required>
     <label class="form-check-label pt-1">I confirm that all data are correct</label>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Create transaction', class: 'form-control primary-color text-white'%>
   </div>
+  
 <% end %>
