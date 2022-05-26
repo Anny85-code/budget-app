@@ -1,24 +1,23 @@
-<div class="text-center m-5">
-<h1>Home page</h1>
-
-
+<div class="text-center p-3">
 <% @categories.each do |category| %>
         <div class="col-xl-4 col-lg-4 col-md-6">
-          <div class="single_recepie text-center">
+          
           <% if can? :read, category %>
           <%= link_to category do %>
         <div class="card-1">
-         <p><%= category.name %></p>
-            <%= image_tag "#{category.icon}", size: "150x150", alt: 'icon' %>
-            <p><%= category.author_id %></p>
+        <div class="d-flex gap-3">
+            <%= image_tag "#{category.icon}", size: "80x80", alt: 'icon' %>
+         <p class="d-flex align-items-center justify-content-between "><%= category.name %></p>
+         </div>
         </div>
       <% end %>
           <% end %>
-          </div>
+         
         </div>
       <% end %>
 
-      <div class="p-5  d-flex align-items-center justify-content-center">
-      <button type="button" class="btn btn-secondary btn-lg w-400"><%= link_to "Create new category", new_category_path %></button></div>
+<div class="d-grid gap-2 col-12 mx-auto p-3">
+      <%= link_to "Create new category",  new_category_path, class: "btn create-category-btn bg-first text-white" %>
+  </div>
 
       </div>

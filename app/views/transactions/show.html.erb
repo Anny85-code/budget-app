@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @transaction %>
+<%= link_to @transaction do %>
+      <div class="card-1">
+        <%= render @transaction %>
+      </div>
+    <% end %>
 
 <div>
   <%= link_to "Edit this transaction", edit_transaction_path(@transaction) %> |
