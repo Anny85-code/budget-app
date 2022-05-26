@@ -1,9 +1,7 @@
 
-<div id="<%= dom_id category %>">
-  <div class="d-flex">
-      <%= image_tag "#{category.icon}", size: "150x150", alt: 'icon' %>
-    <div>
-      <%= category.name %>
-    </div>
-  </div>
+<div id="<%= dom_id category %>" class="container">
+  <div class="d-flex gap-3">
+            <%= image_tag "#{category.icon}", size: "80x80", alt: 'icon' %>
+        <p class="d-flex align-items-center justify-content-between "><%= category.name %></p>
+        </div>
 </div>

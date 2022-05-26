@@ -42,6 +42,10 @@ a:link {
 
 .create-category-btn {
   background-color: #5fb523;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 

@@ -1,10 +1,9 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
-
-<h1>Transactions</h1>
-<p>
+<h5>
   <strong>Total transaction:</strong>
   <%= @total_transactions %>
-</p>
+</h5>
 
 <div id="transactions">
   <% @recent_transactions.each do |transaction| %>
@@ -16,4 +15,7 @@
   <% end %>
 </div>
 
-<%= link_to "New transaction", new_transaction_path %>
+ <div class="d-grid gap-2 col-12 mx-auto pt-5 mb-3 ">
+      <%= link_to "New transaction", new_transaction_path, class: "btn primary-color bg-first text-white" %>
+  </div>
+</div>

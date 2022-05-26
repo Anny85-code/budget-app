@@ -5,8 +5,8 @@
         <% @categories.each do |g| %>
           <%= link_to g do %>
         <div class="card-1">
-         <p><%= g.name %></p>
-            <%= image_tag "#{g.icon}", size: "150x150", alt: 'icon' %>
+        <p><%= g.name %></p>
+            <%= image_tag "#{g.icon}", size: "80x80", alt: 'icon' %>
             <p><%= g.author_id %></p>
         </div>
       <% end %>
