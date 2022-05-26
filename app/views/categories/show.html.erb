@@ -10,10 +10,11 @@
 <% else %>
   <div id="transactions">
   <% @category.transactions.order(created_at: :desc).each do |transaction| %>
-    <%= render transaction %>
-    <p>
-      <%= link_to "Show this transaction", transaction %>
-    </p>
+    <%= link_to transaction do %>
+      <div class="card-1">
+        <%= render transaction %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 <% end %>
