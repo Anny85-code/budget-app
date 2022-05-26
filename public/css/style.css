@@ -4,5 +4,10 @@
 
 .bi {
   font-size: 22px;
-  color: #fff
+  color: #fff;
+  margin-right: 10px;
+}
+
+.width {
+  width: 100%;
 }

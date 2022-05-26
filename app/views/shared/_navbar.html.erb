@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark primary-color width">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,13 +16,15 @@
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <% if user_signed_in? %>
+      <a><%= button_to "Sign out", destroy_user_session_path, method: :delete %></a></li>
+      <p>Welcome <%= current_user.email %></p>
+    <% end %>
         </li>
       </ul>
-      <div class="icon-light">
-      <i class="bi bi-search "></i>
-      </div>
-      
-    </div>
+ </div>
+  <div>
+    <i class="bi bi-search "></i>
+  </div> 
   </div>
 </nav>
