@@ -6,7 +6,7 @@ RSpec.describe "transactions/show", type: :view do
       name: "Name",
       amount: "",
       user: nil,
-      group: nil
+      category: nil
     ))
   end
 

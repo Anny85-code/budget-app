@@ -4,14 +4,14 @@
     <div class="container">
       <h1>Create new category</h1>
      
-      <%= form_with model: @group, url: groups_path, class: " requires-validation" do |form| %>
+      <%= form_with model: @category, url: categories_path, class: " requires-validation" do |form| %>
 
-<% if @group.errors.any? %>
+<% if @category.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
       <ul>
-        <% @group.errors.each do |error| %>
+        <% @category.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

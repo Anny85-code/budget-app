@@ -27,9 +27,9 @@
   </div>
 
   <div>
-    <%= form.label :group_id, style: "display: block" %>
+    <%= form.label :category_id, style: "display: block" %>
     <div>
-      <%= form.select :group_id, Group.all.collect {|g| [g.name, g.id]}, {include_blank: true} %>
+      <%= form.select :category_id, Category.all.collect {|g| [g.name, g.id]}, {include_blank: true} %>
     </div>
   </div>
 

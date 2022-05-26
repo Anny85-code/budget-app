@@ -7,13 +7,13 @@ RSpec.describe "transactions/index", type: :view do
         name: "Name",
         amount: "",
         user: nil,
-        group: nil
+        category: nil
       ),
       Transaction.create!(
         name: "Name",
         amount: "",
         user: nil,
-        group: nil
+        category: nil
       )
     ])
   end

@@ -3,7 +3,7 @@ class EntitiesController < ApplicationController
   # before_action :set_entity, only: %i[show edit destroy]
   before_action :authenticate_user!
   def index
-    # @groups = Group.all
+    # @categories = Category.all
     @entities = Entity.all
     # @total_amount = 0
     # @entities.each do |entity|
@@ -23,9 +23,9 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save
-        # format.html { redirect_to groups_path(id: @group.author_id) }
+        # format.html { redirect_to categories_path(id: @category.author_id) }
         format.html { redirect_to entity_url(@entity) }
-        # format.html { redirect_to groups_path(@group) }
+        # format.html { redirect_to categories_path(@category) }
         flash[:notice] = 'You have successfully created a transaction.'
       else
         format.html { render :new, alert: 'An error has occurred while creating a transaction' }

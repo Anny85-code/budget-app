@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   # get 'pages/home'
   # get 'entities/index'
   # get 'entities/show'
+  
   resources :pages
-  resources :entities
-  resources :groups
+  # resources :entities
+  resources :categories
   devise_for :users
   # , :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

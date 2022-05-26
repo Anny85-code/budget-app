@@ -8,18 +8,18 @@ class Ability
       can :manage, :all
     else
       can :create, Entity
-      can :create, Group
+      can :create, Category
       can :destroy, Entity do |entity|
         entity.author_id == user.id
       end
-      can :destroy, Group do |group|
-        group.author_id == user.id
+      can :destroy, Category do |category|
+        category.author_id == user.id
       end
       can :read, Entity do |entity|
         entity.author_id == user.id
       end
-      can :read, Group do |group|
-        group.author_id == user.id
+      can :read, Category do |category|
+        category.author_id == user.id
       end
     end
   end

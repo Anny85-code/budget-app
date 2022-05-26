@@ -7,7 +7,7 @@
 
         <% if @entity.errors.any? %>
           <div style="color: red">
-            <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this group from being saved:</h2>
+            <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this category from being saved:</h2>
 
             <ul>
               <% @entity.errors.each do |error| %>
@@ -33,9 +33,9 @@
         </div>
 
         <div>
-          label :group_id, style: "display: block" %>
+          label :category_id, style: "display: block" %>
           <div>
-            <%= form.select :group_id, Group.all.collect {|g| [g.name, g.id]}, {include_blank: true} %>
+            <%= form.select :category_id, Category.all.collect {|g| [g.name, g.id]}, {include_blank: true} %>
           </div>
         </div>
 

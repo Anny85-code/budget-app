@@ -1,0 +1,22 @@
+<h1>Categories#show</h1>
+
+<%# if can? :destroy, @category <===========ThEre'S no DEsTroy AcTioN============|    %> 
+  <%= render @category %>
+  <%#= button_to "Destroy this category", @categories_path, method: :delete %>
+<%# end %>
+
+<% if @category.transactions.empty? %>
+  <p>No transactions at this time! Add some...</p>
+<% else %>
+  <div id="transactions">
+  <% @category.transactions.order(created_at: :desc).each do |transaction| %>
+    <%= render transaction %>
+    <p>
+      <%= link_to "Show this transaction", transaction %>
+    </p>
+  <% end %>
+</div>
+<% end %>
+
+<%= link_to "New transaction", new_transaction_path %>
+

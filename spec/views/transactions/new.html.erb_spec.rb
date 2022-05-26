@@ -6,7 +6,7 @@ RSpec.describe "transactions/new", type: :view do
       name: "MyString",
       amount: "",
       user: nil,
-      group: nil
+      category: nil
     ))
   end
 
@@ -21,7 +21,7 @@ RSpec.describe "transactions/new", type: :view do
 
       assert_select "input[name=?]", "transaction[author_id]"
 
-      assert_select "input[name=?]", "transaction[group_id]"
+      assert_select "input[name=?]", "transaction[category_id]"
     end
   end
 end

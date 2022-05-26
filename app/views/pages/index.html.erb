@@ -2,20 +2,20 @@
 <h1>Home page</h1>
 
 
-<% @groups.each do |group| %>
+<% @categories.each do |category| %>
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single_recepie text-center">
-          <% if can? :read, group %>
-            <p><%= group.name %></p>
-            <p><%= group.icon %></p>
-            <p><%= group.author_id %></p>
-            <%= link_to "see more", group %>
+          <% if can? :read, category %>
+            <p><%= category.name %></p>
+            <p><%= category.icon %></p>
+            <p><%= category.author_id %></p>
+            <%= link_to "see more", category %>
           <% end %>
           </div>
         </div>
       <% end %>
 
       <div class="p-5  d-flex align-items-center justify-content-center">
-      <button type="button" class="btn btn-secondary btn-lg w-400"><%= link_to "Create new category", new_group_path %></button></div>
+      <button type="button" class="btn btn-secondary btn-lg w-400"><%= link_to "Create new category", new_category_path %></button></div>
 
       </div>

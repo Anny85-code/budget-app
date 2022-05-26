@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @groups = Group.order(id: 'DESC')
+    @categories = Category.order(id: 'DESC')
   end
 end
 
