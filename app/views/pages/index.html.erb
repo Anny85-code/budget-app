@@ -6,10 +6,13 @@
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single_recepie text-center">
           <% if can? :read, category %>
-            <p><%= category.name %></p>
-            <p><%= category.icon %></p>
+          <%= link_to category do %>
+        <div class="card-1">
+         <p><%= category.name %></p>
+            <%= image_tag "#{category.icon}", size: "150x150", alt: 'icon' %>
             <p><%= category.author_id %></p>
-            <%= link_to "see more", category %>
+        </div>
+      <% end %>
           <% end %>
           </div>
         </div>

@@ -29,4 +29,13 @@ a:link {
   font-size: 47px;
 }
 
+.card-1 {
+  background-color: #fff;
+  padding: 20px 50px;
+  font-size: 20px;
+  border-radius: 13px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
 

@@ -1,5 +1,9 @@
-  <div>
-    <h3><%= category.name %></h3>
-    <h3><%= category.icon %></h3>
-    <%= category.author_id %>
+
+<div id="<%= dom_id category %>">
+  <div class="d-flex">
+      <%= image_tag "#{category.icon}", size: "150x150", alt: 'icon' %>
+    <div>
+      <%= category.name %>
+    </div>
   </div>
+</div>
