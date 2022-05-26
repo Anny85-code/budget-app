@@ -5,26 +5,40 @@
     </button>
     
     <a class="navbar-brand" href="#">
-    <%= controller_name %>
+    <%= action_name.capitalize %>
+    <%= controller_name.capitalize.singularize %>
     </a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <li class="nav-item mt-2">
+        <li><%= link_to 'Home', root_path, class: "text-light" %></li>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item mt-2">
+          <li><%= link_to 'Transactions', transactions_path, class: "text-light" %></li>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mt-2">
       <% if user_signed_in? %>
       <a><%= button_to "Sign out", destroy_user_session_path, method: :delete %></a></li>
-      <p>Welcome <%= current_user.email %></p>
+      <p class="mt-2">Welcome <%= current_user.email %></p>
     <% end %>
         </li>
       </ul>
  </div>
   <div>
-    <i class="bi bi-search "></i>
+    <% case "#{action_name.capitalize} #{controller_name.capitalize.singularize}" %>
+        <% when "New Session" %>
+          <%# <input type="submit" value="Login" form="session_path(resource_name)"> %>
+          <%#= link_to "Login", session_path(resource_name), class: "text-white" %> 
+          <%= link_to "Login",  new_user_session_path, class: "text-white" %>
+        <% when "New Registration" %>
+          <%= link_to "Next", session_path(resource_name), class: "text-white" %>
+        <% when "Index Category" %>
+          <i class="bi bi-search"></i>
+        <% when "Index Transaction" %>
+          <i class="bi bi-search"></i>
+        <% else %>
+          <p class="color-first"> </p>
+      <% end %>
   </div> 
   </div>
 </nav>

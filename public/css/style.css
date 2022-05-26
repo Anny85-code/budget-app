@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap');
+
 .primary-color {
   background-color: #3778c2;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .bi {
@@ -11,3 +17,11 @@
 .width {
   width: 100%;
 }
+
+.splash-text {
+  font-family: 'Satisfy', cursive;
+  color: #000;
+  font-size: 47px;
+}
+
+
