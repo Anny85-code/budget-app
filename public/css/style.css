@@ -14,6 +14,11 @@ a:link {
   margin-right: 10px;
 }
 
+.be {
+  color: rgb(99, 91, 91);
+  font-size: 35px;
+}
+
 .width {
   width: 100%;
 }
