@@ -1,3 +1,4 @@
+<% if controller_name != 'splashs' %>
 <nav class="navbar navbar-expand-lg navbar-dark primary-color width">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -5,8 +6,22 @@
     </button>
     
     <a class="navbar-brand" href="#">
-    <%= action_name.capitalize %>
-    <%= controller_name.capitalize.singularize %>
+    <% case "#{action_name.capitalize} #{controller_name.capitalize.singularize}" %>
+        <% when "New Session" %>
+          LOGIN
+        <% when "New Registration" %>
+          REGISTER
+        <% when "New Password" %>
+          RECOVER PASSWORD
+        <% when "Show Category" %>
+          VIEWS
+        <% when "Index Category" %>
+          CATEGORIES
+        <% when "Index Page" %>
+          TRANSACTIONS
+        <% else %>
+          <%= controller_name.upcase.singularize %>
+        <% end %>
     </a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,3 +57,6 @@
   </div> 
   </div>
 </nav>
+
+  
+<% end %>
