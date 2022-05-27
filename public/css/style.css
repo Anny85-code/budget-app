@@ -68,16 +68,16 @@ li {
   color: #434b54;
 }
 
-.notice, .alert { 
+.notice,
+.alert {
   --bs-alert-bg: transparent !important;
-    --bs-alert-padding-x: 0 !important;
-    --bs-alert-padding-y: 0 !important;
-    --bs-alert-margin-bottom: 0 !important;
-    --bs-alert-color: inherit !important;
-    --bs-alert-border-color: transparent;
-    --bs-alert-border: 0 !important;
-    --bs-alert-border-radius: 0 !important;
-    position: relative;
+  --bs-alert-padding-x: 0 !important;
+  --bs-alert-padding-y: 0 !important;
+  --bs-alert-margin-bottom: 0 !important;
+  --bs-alert-color: inherit !important;
+  --bs-alert-border-color: transparent;
+  --bs-alert-border: 0 !important;
+  --bs-alert-border-radius: 0 !important;
 }
 
 .tname {

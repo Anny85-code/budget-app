@@ -7,6 +7,8 @@
 
 ## Screenshot
 
+![screencapture-localhost-3000-2022-05-27-12_08_18](https://user-images.githubusercontent.com/87186552/170690774-4b5d0b9e-36ac-4530-80e6-70000c73d467.png)
+
 ## Built With
 
 - Ruby on Rails

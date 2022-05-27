@@ -22,7 +22,7 @@
   <div>
     <div>
       <div>
-        <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]}, { prompt: "Select Category" }, class:"form-control mb-3" %>
+        <%= form.select :category_id, current_user.categories.collect {|c| [c.name, c.id]}, { prompt: "Select Category" }, class:"form-control mb-3" %>
       </div>
     </div>
   </div>
