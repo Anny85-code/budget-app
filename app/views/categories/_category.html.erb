@@ -1,7 +1,11 @@
 
 <div id="<%= dom_id category %>" class="container">
-  <div class="d-flex gap-3">
+  <div class="card-1 d-flex gap-3">
             <%= image_tag "#{category.icon}", size: "80x80", alt: 'icon' %>
-        <p class="d-flex align-items-center justify-content-between "><%= category.name %></p>
-        </div>
+        <p class="d-flex align-items-center justify-content-between tname"><%= category.name %></p>
+
+  <div class="mt-4">
+    <h6 class="total_at tamount"><b>Total:</b><%= number_to_currency(category.transactions.sum(:amount)) %></h6>
+  </div>
+  </div>
 </div>

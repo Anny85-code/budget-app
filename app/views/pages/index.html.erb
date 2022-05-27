@@ -1,11 +1,9 @@
 <div class="text-center p-3">
 <% @categories.each do |category| %>
-        <%# <div class="col-xl-4 col-lg-4 col-md-6"> %>
-          
-          <% if can? :read, category %>
+        <% if can? :read, category %>
           <%= link_to category do %>
         <div class="card-1">
-        <div class="d-flex gap-3 ">
+        <div class="d-flex gap-3">
             <%= image_tag "#{category.icon}", size: "80x80", alt: 'icon' %>
         <ul>
         <li><p class="d-flex align-items-center justify-content-between "><%= category.name %></p></li>
@@ -19,12 +17,10 @@
         </div>
         </div>
       <% end %>
-          <% end %>
-         
-        <%# </div> %>
+      <% end %>
       <% end %>
 
-  <div class="d-grid gap-2 col-12 mx-auto pt-5 ">
+  <div class="d-grid gap-2 col-12 mx-auto pt-5 mt-5">
       <%= link_to "Create new category",  new_category_path, class: "btn create-category-btn bg-first text-white" %>
   </div>
 </div>

@@ -1,17 +1,15 @@
 <div id="<%= dom_id transaction %>">
-  <p>
-    <strong>Name:</strong>
-    <%= transaction.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= transaction.amount %>
-  </p>
-
-  <p class="created_at">
-    <strong>Date:</strong>
-    <%= transaction.created_at.strftime('%F - %I:%H:%M %p') %>
-  </p>
-
+  <div class="d-flex gap-3">
+      <%= image_tag "#{transaction.category.icon}", size: "80x80", alt: 'icon' %>
+  <ul>
+  <li><p class="d-flex align-items-center justify-content-between "><%= transaction.name %></p></li>
+  <li>
+  <span class="created_at"><%= transaction.created_at.strftime('%F - %I:%H:%M %p') %></span>
+  </li>
+  </ul>
+  <div class="mt-3">
+  <h6 class="total_at"> <%=  number_to_currency(transaction.amount) %></h6>
+  </div>
+  </div>
 </div>
+

@@ -80,3 +80,11 @@ li {
     --bs-alert-border-radius: 0 !important;
     position: relative;
 }
+
+.tname {
+  font-size: 17px;
+}
+
+.tamount {
+  font-size: 12px;
+}
