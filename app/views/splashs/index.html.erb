@@ -1,0 +1,15 @@
+<div class="pt-5 pb-5 m-5">
+<h1 class="text-center mb-5 splash-text">Budget Alpha</h1>
+</div>
+<div class="pb-5">
+  <div class="">
+    <p style="color: red"><%= flash[:alert] %></p>
+    <div class="d-flex justify-content-center">
+      <%= image_tag '/asset/image/bget.gif', size: "250x240", alt: 'icon', class: "justify-content-center" %>
+    </div>
+    <div class="d-grid gap-2 col-12 mx-auto p-3">
+      <%= link_to "Log in", new_user_session_path, class: "btn primary-color bg-first text-white" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-gray" %>
+    </div>
+  </div>
+</div>

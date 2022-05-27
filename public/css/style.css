@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap');
+
+.primary-color {
+  background-color: #3778c2;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.bi {
+  font-size: 22px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.be {
+  color: rgb(99, 91, 91);
+  font-size: 35px;
+}
+
+.width {
+  width: 100%;
+}
+
+.splash-text {
+  font-family: 'Satisfy', cursive;
+  color: #000;
+  font-size: 47px;
+}
+
+.card-1 {
+  background-color: #fff;
+  padding: 10px 10px;
+  font-size: 22px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  font-family: proxima-nova, sans-serif;
+  color: #434b54;
+}
+
+.create-category-btn {
+  background-color: #5fb523;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.created_at {
+  font-size: 10px;
+  color: #434b54;
+}
+
+.total_at {
+  font-size: 15px;
+  color: #434b54;
+}
+
+.notice, .alert { 
+  --bs-alert-bg: transparent !important;
+    --bs-alert-padding-x: 0 !important;
+    --bs-alert-padding-y: 0 !important;
+    --bs-alert-margin-bottom: 0 !important;
+    --bs-alert-color: inherit !important;
+    --bs-alert-border-color: transparent;
+    --bs-alert-border: 0 !important;
+    --bs-alert-border-radius: 0 !important;
+    position: relative;
+}
+
+.tname {
+  font-size: 17px;
+}
+
+.tamount {
+  font-size: 12px;
+}

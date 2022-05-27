@@ -1,0 +1,15 @@
+<div class="text-center m-5">
+    
+    <div class="container-fluid m-2">
+      <div class="row">
+        <% @categories.each do |g| %>
+          <%= link_to g do %>
+        <div class="card-1">
+        <p><%= g.name %></p>
+            <%= image_tag "#{g.icon}", size: "80x80", alt: 'icon' %>
+        </div>
+      <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
-    @message = 'This is the home page'
+  def index
+    @categories = Category.includes(:transactions).order(id: 'DESC')
   end
 end
