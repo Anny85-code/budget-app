@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
       if @category.save
 
         format.html { redirect_to category_url(@category) }
-        
+
         flash[:notice] = 'You have successfully created a category.'
       else
         format.html { render :new, alert: 'An error has occurred while creating category' }

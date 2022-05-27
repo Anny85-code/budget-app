@@ -32,9 +32,8 @@ class EntitiesController < ApplicationController
     #   @entity = Entity.find(params[:id])
     # end
 
-  # def entity_params
-  #   params.require(:entity).permit(:name, :amount)
-  # end
+    # def entity_params
+    #   params.require(:entity).permit(:name, :amount)
+    # end
+  end
 end
-end
-
