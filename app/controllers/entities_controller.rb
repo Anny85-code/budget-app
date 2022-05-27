@@ -1,13 +1,8 @@
 class EntitiesController < ApplicationController
   load_and_authorize_resource
-  # before_action :set_entity, only: %i[show edit destroy]
   before_action :authenticate_user!
   def index
-    # @categories = Category.all
     @entities = Entity.all
-    # @total_amount = 0
-    # @entities.each do |entity|
-    #   @total_amount += entity.amount
   end
 
   def show
