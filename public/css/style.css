@@ -78,6 +78,7 @@ li {
   --bs-alert-border-color: transparent;
   --bs-alert-border: 0 !important;
   --bs-alert-border-radius: 0 !important;
+  
   position: relative;
 }
 
