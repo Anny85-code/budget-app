@@ -12,5 +12,4 @@ RSpec.describe Transaction, type: :model do
     subject.amount = ''
     expect(subject).to_not be_valid
   end
-
 end

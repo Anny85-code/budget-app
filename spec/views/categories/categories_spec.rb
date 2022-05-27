@@ -21,6 +21,5 @@ RSpec.describe 'Test for Category page', type: :feature do
     it 'if can see add category button' do
       expect(page).to have_content('Create new category')
     end
-
   end
 end
