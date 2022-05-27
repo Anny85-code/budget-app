@@ -2,8 +2,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark primary-color width">
   <div class="container-fluid">
     <% unless "#{action_name.capitalize} #{controller_name.capitalize.singularize}" == "Index Category" || "#{action_name.capitalize} #{controller_name.capitalize.singularize}" == "Index Transaction" || "#{action_name.capitalize} #{controller_name.capitalize.singularize}" == "Index Page" %>
-        <%# <i class="bi bi-arrow-left text-white fs-4"></i> %>
-        <%# <%= link_to "Back", "history.back()" %>
         
         <% if "#{action_name.capitalize} #{controller_name.capitalize.singularize}" == "New Transaction" %>
           <%= link_to 'javascript:history.back()' do %>
