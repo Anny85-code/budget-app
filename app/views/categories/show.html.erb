@@ -1,9 +1,4 @@
-<%# <h1>Categories#show</h1> %>
-
-<%# if can? :destroy, @category <===========ThEre'S no DEsTroy AcTioN============|    %> 
-  <%= render @category %>
-  <%#= button_to "Destroy this category", @categories_path, method: :delete %>
-<%# end %>
+<%= render @category %>
 <div class="container">
 <% if @category.transactions.empty? %>
   <p>No transactions at this time! Add some...</p>

@@ -64,8 +64,6 @@
   <div>
     <% case "#{action_name.capitalize} #{controller_name.capitalize.singularize}" %>
         <% when "New Session" %>
-          <%# <input type="submit" value="Login" form="session_path(resource_name)"> %>
-          <%#= link_to "Login", session_path(resource_name), class: "text-white" %> 
           <%= link_to "Login",  new_user_session_path, class: "text-white" %>
         <% when "New Registration" %>
           <%= link_to "Next", session_path(resource_name), class: "text-white" %>
