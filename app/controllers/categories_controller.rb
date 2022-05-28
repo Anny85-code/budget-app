@@ -14,12 +14,13 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    # @category = @user.categories.new
     @category = Category.new(category_params)
+    # @category = current_user.categories.new(category_params)
+
     respond_to do |format|
       if @category.save
-
         format.html { redirect_to category_url(@category) }
-
         flash[:notice] = 'You have successfully created a category.'
       else
         format.html { render :new, alert: 'An error has occurred while creating category' }
