@@ -1,0 +1,16 @@
+<div class="container">
+<p style="color: green"><%= notice %></p>
+
+<%= link_to @transaction do %>
+      <div class="card-1">
+        <%= render @transaction %>
+      </div>
+    <% end %>
+
+<div>
+  <%= link_to "Edit this transaction",  edit_transaction_path(@transaction), hidden:true %>
+  <%= link_to "<", transactions_path, hidden:true %>
+
+  <%= button_to "Destroy this transaction", @transactions_path, method: :delete, hidden: true %>
+</div>
+</div>

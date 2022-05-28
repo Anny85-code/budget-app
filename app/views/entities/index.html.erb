@@ -1,0 +1,15 @@
+<div class="text-center m-5">
+    
+    <div class="container-fluid m-2">
+      <div class="row">
+        <% @entities.each do |entity| %>
+          <%= render entity %>
+          <%# <%= render partial: "category", locals: { category: g} %> 
+
+
+        <% end %>
+                <div class="p-5  d-flex align-items-center justify-content-center">
+      <button type="button" class="btn btn-secondary btn-lg w-400"><%= link_to "Create new transaction", new_entity_path %></button></div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+<%= form_with(model: transaction) do |form| %>
+  <% if transaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div> 
+    <%= form.text_field :name, class: 'form-control', placeholder: 'name' %>
+  </div><br>
+
+  <div>
+    <%= form.number_field :amount, class: 'form-control', placeholder: 'amount' %>
+  </div><br>
+  
+  <div>
+    <%= form.number_field :author_id, class: 'form-control', value: current_user.id, hidden: true %>
+  </div><br>
+
+  <div>
+    <div>
+      <div>
+        
+        <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]}, { prompt: "Select Category" }, class:"form-control mb-3" %>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input mt-2" type="checkbox" value="" id="invalidCheck" required>
+    <label class="form-check-label pt-1">I confirm that all data are correct</label>
+  </div><br>
+
+  <div>
+    <%= form.submit 'Create transaction', class: 'form-control primary-color text-white'%>
+  </div>
+  
+<% end %>
