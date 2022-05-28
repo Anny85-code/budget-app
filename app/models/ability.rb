@@ -6,16 +6,16 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :create, Entity
+      can :create, Transaction
       can :create, Category
-      can :destroy, Entity do |entity|
-        entity.author_id == user.id
+      can :destroy, Transaction do |transaction|
+        transaction.author_id == user.id
       end
       can :destroy, Category do |category|
         category.author_id == user.id
       end
-      can :read, Entity do |entity|
-        entity.author_id == user.id
+      can :read, Transaction do |transaction|
+        transaction.author_id == user.id
       end
       can :read, Category do |category|
         category.author_id == user.id

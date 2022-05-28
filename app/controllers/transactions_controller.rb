@@ -1,15 +1,17 @@
 class TransactionsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
   before_action :set_transaction, only: %i[show edit update destroy]
 
   def index
     @transactions = Transaction.all
     @recent_transactions = @transactions.order(created_at: :desc)
-    @total_transactions = current_user.transactions.sum(:amount)
+    @total_transactions = @transactions.sum(:amount)
   end
 
   # GET /transactions/1 or /transactions/1.json
   def show
-    @transaction = current_user.transactions.find(params[:id])
+    @transaction = Transaction.find(params[:id])
   end
 
   # GET /transactions/new

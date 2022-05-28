@@ -16,11 +16,16 @@
     </div>
   <% end %>
 
-  <div class="col mb-0">
+    <div class="col mb-0">
       <%= form.text_field :name, class: 'form-control', placeholder: 'name' %> 
-      </div><br>
-      <div class="col">
+    </div><br>
+    
+    <div class="col">
       <%= form.url_field :icon, class: "form-control", placeholder: 'Enter image url' %> <br>
+    </div>
+    
+    <div class="col">
+      <%= form.text_field :author_id, class: "form-control", value: current_user.id, hidden: true %> <br>
     </div>
 
   <div class="form-check">
