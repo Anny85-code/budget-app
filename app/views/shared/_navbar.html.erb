@@ -47,16 +47,25 @@
     </a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item mt-2">
-        <li><%= link_to 'Home', root_path, class: "text-light" %></li>
+      <h2 class="mt-3 text-white">Welcome </h2>
+      <hr class='text-white'>
+      <h2 class="mt-2 text-white"><%= current_user.name %></h2>
+      <hr class='text-white'>
+        <li class="nav-item mt-2 d-flex flex-row">
+        <li><h2><%= link_to 'Home', root_path, class: "text-light" %></h2></li>
+        <li><i class="bi bi-house-heart"></i></i></li>
+        <hr class='text-white'>
         </li>
         <li class="nav-item mt-2">
-          <li><%= link_to 'Transactions', transactions_path, class: "text-light" %></li>
+          <li><h2><%= link_to 'Transactions', transactions_path, class: "text-light" %></h2></li>
+          <li><i class="bi bi-wallet2"></i></li>
+          <hr class='text-white'>
         </li>
         <li class="nav-item mt-2">
       <% if user_signed_in? %>
-      <a><%= button_to "Sign out", destroy_user_session_path, method: :delete %></a></li>
-      <p class="mt-2">Welcome <%= current_user.email %></p>
+      <a><%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn primary-color text-white fs-22' %></a></li>
+      <hr class='text-white'>
+      
     <% end %>
         </li>
       </ul>
