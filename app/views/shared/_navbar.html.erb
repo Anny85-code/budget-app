@@ -66,11 +66,10 @@
       
       <a><%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn primary-color text-white fs-22' %></a></li>
       <hr class='text-white'>
-      
-    <% end %>
         </li>
       </ul>
- </div>
+  </div>
+    <% end %>
   <div>
     <% case "#{action_name.capitalize} #{controller_name.capitalize.singularize}" %>
         <% when "New Session" %>
